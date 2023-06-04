@@ -1,10 +1,10 @@
 const express = require('express');
+const cors = require('cors')
 const app = express();
-const mongoose = require('mongoose');
+const dbConnection = require('./config/dbConnection.js')
 
-
-mongoose.connect('mongodb+srv://fashionbazar:fashionbazar@cluster0.qm7pw.mongodb.net/fashionbazar?retryWrites=true&w=majority')
-  .then(() => console.log('Connected!'));
+app.use(cors())
+dbConnection()
 
 app.get('/', function (req, res) {
   res.send('Hello World')
