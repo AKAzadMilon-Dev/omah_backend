@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 function dbConnection(){
-    mongoose.connect('mongodb+srv://fashionbazar:fashionbazar@cluster0.qm7pw.mongodb.net/fashionbazar?retryWrites=true&w=majority')
+    mongoose.connect('mongodb+srv://ecommerce:ecommerce@cluster0.qm7pw.mongodb.net/ecommerce?retryWrites=true&w=majority')
       .then(() => console.log('Connected!'));
 }
 
