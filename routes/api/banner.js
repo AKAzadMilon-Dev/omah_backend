@@ -1,9 +1,8 @@
 const express = require('express')
 const _ = express.Router()
+const bannerController = require('../../controllers/bannerController.js')
 
+_.post("/banner", bannerController)
 
-_.get("/banner", (req, res)=>{
-    res.send("ami banner routes")
-})
 
 module.exports = _
